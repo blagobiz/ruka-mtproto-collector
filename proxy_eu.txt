@@ -1,0 +1,2 @@
+# RUKA MTProto Collector
+# This file is updated by GitHub Actions after the first successful run.
