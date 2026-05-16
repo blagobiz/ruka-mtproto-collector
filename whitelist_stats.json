@@ -1,0 +1,25 @@
+{
+  "updated_at": 1778940565,
+  "updated_at_iso": "2026-05-16T14:09:25Z",
+  "sources": {
+    "igareck_rus_mobile": {
+      "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/Vless-Reality-White-Lists-Rus-Mobile.txt",
+      "links": 73
+    },
+    "igareck_rus_mobile_2": {
+      "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/Vless-Reality-White-Lists-Rus-Mobile-2.txt",
+      "links": 0
+    },
+    "zieng2_lite": {
+      "url": "https://raw.githubusercontent.com/zieng2/wl/main/vless_lite.txt",
+      "links": 368
+    }
+  },
+  "totals": {
+    "igareck": 73,
+    "zieng2": 368,
+    "all": 441,
+    "ios": 7,
+    "android": 434
+  }
+}

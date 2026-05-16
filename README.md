@@ -1,32 +1,30 @@
-# Free Telegram Proxy & MTProto Proxy List by RUKA VPN
+# Бесплатные прокси для Telegram и белые списки обхода | RUKA VPN
 
 ![Python](https://img.shields.io/badge/Python-3.11+-blue?style=for-the-badge&logo=python)
 ![Telegram](https://img.shields.io/badge/Telegram-MTProto-2496ed?style=for-the-badge&logo=telegram)
-![Updates](https://img.shields.io/badge/Updates-Fresh_Lists-success?style=for-the-badge&logo=github)
-![Brand](https://img.shields.io/badge/Brand-RUKA%20VPN-1f8bff?style=for-the-badge)
+![Обновления](https://img.shields.io/badge/Обновления-Свежие_списки-success?style=for-the-badge&logo=github)
+![Бренд](https://img.shields.io/badge/Бренд-RUKA%20VPN-1f8bff?style=for-the-badge)
 
-**RUKA MTProto Collector** is a branded repository with fresh **free Telegram proxy** and **MTProto proxy** lists for users who need quick Telegram access on **iPhone, Android, Windows and macOS**.
+**RUKA MTProto Collector** — это брендированный репозиторий под `RUKA VPN`, где публикуются:
 
-Если говорить просто: это публичная точка входа, где публикуются свежие **MTProto-прокси для Telegram**, готовые `.txt`-списки, мобильная страница для быстрого подключения и ссылки на полноценный **VPN** через `@RukaVPN_bot`.
+- **бесплатные MTProto-прокси для Telegram**
+- **VLESS-конфиги по обходу и белым спискам**
+- готовые `.txt`-файлы для iPhone, Android и ПК
+- GitHub Pages-витрина под поисковые запросы
 
-## What You Get
+Если говорить просто: это публичная точка входа, где человек может взять либо **прокси для Telegram бесплатно**, либо **конфиги белых списков / обхода**, а потом перейти в полноценный VPN через `@RukaVPN_bot`.
 
-- fresh **Telegram MTProto proxy list**
-- free **Telegram proxy for iPhone**
-- free **Telegram proxy for Android**
-- public raw files for clients and websites
-- GitHub-hosted branded entrypoint for search traffic
-- mobile page that opens Telegram proxy links directly
+## Что есть в этом репозитории
 
-## Актуальные MTProto списки
+### MTProto для Telegram
 
-Используй готовые raw-файлы:
+Готовые raw-файлы:
 
 - `RU`: <https://raw.githubusercontent.com/blagobiz/ruka-mtproto-collector/main/proxy_ru.txt>
 - `Global / EU`: <https://raw.githubusercontent.com/blagobiz/ruka-mtproto-collector/main/proxy_eu.txt>
 - `All`: <https://raw.githubusercontent.com/blagobiz/ruka-mtproto-collector/main/proxy_all.txt>
 
-Проверенные файлы:
+Проверенные MTProto-файлы:
 
 - `verified/proxy_ru_verified.txt`
 - `verified/proxy_eu_verified.txt`
@@ -35,22 +33,31 @@
 - `verified/proxy_all_verified.json`
 - `verified/proxy_stats_verified.json`
 
-## GitHub Pages
+### Белые списки и обход
 
-Публичные страницы репозитория:
+Готовые raw-файлы:
 
-- main landing: `index.html`
-- mobile entrypoint: `mobile.html`
+- `igareck`: <https://raw.githubusercontent.com/blagobiz/ruka-mtproto-collector/main/whitelist_igareck.txt>
+- `zieng2`: <https://raw.githubusercontent.com/blagobiz/ruka-mtproto-collector/main/whitelist_zieng2.txt>
+- `All`: <https://raw.githubusercontent.com/blagobiz/ruka-mtproto-collector/main/whitelist_all.txt>
+- `iPhone`: <https://raw.githubusercontent.com/blagobiz/ruka-mtproto-collector/main/whitelist_ios.txt>
+- `Android / универсальные`: <https://raw.githubusercontent.com/blagobiz/ruka-mtproto-collector/main/whitelist_android.txt>
 
-После включения GitHub Pages их можно использовать как:
+Служебный файл:
 
-- landing page под запросы `прокси для Telegram бесплатно`
-- mobile page для прямого открытия `tg://proxy`
-- branded GitHub-витрину под `RUKA VPN`
+- `whitelist_stats.json`
 
-## Бесплатные прокси для Telegram
+## Публичные страницы GitHub Pages
 
-Этот репозиторий заточен под запросы:
+После включения GitHub Pages в репозитории доступны:
+
+- `index.html` — витрина для бесплатных MTProto-прокси
+- `mobile.html` — мобильный вход для Telegram proxy
+- `whitelist.html` — витрина под белые списки и VLESS-конфиги обхода
+
+## Для каких запросов подходит
+
+Этот репозиторий заточен под русские и международные интенты:
 
 - `прокси для telegram бесплатно`
 - `бесплатные прокси telegram`
@@ -58,94 +65,88 @@
 - `telegram proxy free`
 - `telegram proxy iphone`
 - `telegram proxy android`
-- `mtproto для telegram`
-- `free telegram proxy list`
+- `белые списки vpn`
+- `конфиги обхода блокировок`
+- `vless белые списки`
+- `конфиги для сложного мобильного интернета`
 
-Идея простая:
+## Что даёт MTProto, а что дают белые списки
 
-- нужен только Telegram -> человек использует **free MTProto**
-- нужен YouTube, Instagram, ChatGPT и другие сервисы -> человек переходит в **VPN**
+### MTProto
 
-## Как использовать на телефоне
+Используется, если нужен доступ только в Telegram.
 
-Самый простой путь:
-
-1. Открыть `mobile.html`
-2. Нажать кнопку подключения
-3. Telegram сразу откроет экран импорта прокси
-
-Если нужен ручной сценарий:
-
-1. Открыть raw-файл из этого репозитория
-2. Скопировать ссылку или подписку
-3. Импортировать её в нужный клиент
-
-## Для каких клиентов подходит
-
-MTProto-ссылки из этого репозитория можно использовать в:
+Подходит для:
 
 - Telegram iPhone
 - Telegram Android
 - Telegram Desktop
-- сторонних клиентах, которые поддерживают proxy import
 
-Для полноценных VPN-конфигов и обхода не только Telegram используй:
+### Белые списки / обход
 
-- `https://t.me/RukaVPN_bot`
+Используются, если нужен более широкий обход через VLESS-конфиги, особенно на сложных мобильных сетях и нестабильных провайдерах.
 
-## Что делает collector
+Подходят для:
 
-Collector проходит несколько этапов:
+- клиентов V2Ray / sing-box / Hiddify / Happ / других совместимых клиентов
+- сценариев с мобильным интернетом
+- белых списков и обхода блокировок
 
-1. **Сбор**
-   - получает MTProto-прокси из публичных источников
-   - умеет разбирать `tg://proxy`, `t.me/proxy`, `host:port:secret`, JSON
+## Источники белых списков
 
-2. **Нормализация**
-   - приводит найденные прокси к единому виду
-   - удаляет дубли и мусор
+Сейчас репозиторий собирает конфиги отсюда:
 
-3. **Фильтрация**
-   - разделяет список на `RU`, `EU / Global` и `All`
-   - поддерживает branded публикацию
+- [igareck/vpn-configs-for-russia](https://github.com/igareck/vpn-configs-for-russia)
+- [zieng2/wl](https://github.com/zieng2/wl)
 
-4. **Проверка**
-   - делает базовую проверку доступности
-   - оставляет более чистый пул для публикации
+Что важно:
 
-5. **Публикация**
-   - обновляет `verified/*`
-   - копирует итоговые `.txt` в корень
-   - поддерживает GitHub как публичную витрину проекта
+- `igareck` даёт сильный слой под российский мобильный интернет
+- `zieng2` даёт более широкий пул VLESS-конфигов
+- в репозитории они собираются в отдельные `.txt`-файлы и общий объединённый список
 
-## Почему это полезно для RUKA VPN
+## Как обновляются белые списки
 
-Репозиторий работает сразу в нескольких ролях:
+Для этого добавлен отдельный скрипт:
 
-- как **SEO-вход** под бесплатные MTProto-прокси
-- как **GitHub brand page**
-- как источник `.txt` и `.json` для сайта
-- как переход из бесплатного Telegram proxy в платный VPN
+- `fetch_whitelist_configs.py`
 
-Это хороший сценарий для маркетинга:
+Он:
 
-- бесплатный вход по Telegram-интенту
-- доверие через GitHub и обновляемые списки
-- апсейл в `@RukaVPN_bot`
+1. скачивает свежие VLESS-конфиги из `igareck` и `zieng2`
+2. извлекает только валидные `vless://` ссылки
+3. удаляет дубли
+4. собирает:
+   - `whitelist_igareck.txt`
+   - `whitelist_zieng2.txt`
+   - `whitelist_all.txt`
+   - `whitelist_ios.txt`
+   - `whitelist_android.txt`
+5. пишет `whitelist_stats.json`
 
-## Auto Update
+## Как использовать
 
-В репозитории подготовлен workflow для регулярного обновления списков.
+### Если нужен только Telegram
 
-Логика такая:
+1. Открой `mobile.html`
+2. Нажми кнопку подключения
+3. Telegram сразу откроет экран импорта прокси
 
-1. запускается по расписанию
-2. ставит зависимости
-3. запускает `python main.py --top 200`
-4. обновляет `verified/*`
-5. обновляет публичные `.txt`
+### Если нужны белые списки / обход
 
-## Local Run
+1. Открой `whitelist.html`
+2. Выбери нужный `.txt`
+3. Импортируй конфиг в свой клиент
+
+### Если нужен полноценный VPN
+
+Переходи в:
+
+- <https://t.me/RukaVPN_bot>
+
+## Запуск локально
+
+### MTProto collector
 
 ```bash
 git clone https://github.com/blagobiz/ruka-mtproto-collector.git
@@ -154,58 +155,32 @@ pip install -r requirements.txt
 python main.py --top 200
 ```
 
-Для более строгой проверки:
+### Белые списки / обход
 
 ```bash
-export MTPROXY_API_ID=123456
-export MTPROXY_API_HASH=your_hash
-python main.py --top 200
+python fetch_whitelist_configs.py
 ```
 
-## FAQ
+## Зачем это полезно для RUKA VPN
 
-### Это VPN?
+Репозиторий работает сразу в нескольких ролях:
 
-Нет. Это **MTProto proxy for Telegram**. Он нужен именно для Telegram.
+- как **SEO-вход** под бесплатные MTProto-прокси
+- как **SEO-вход** под белые списки и обход
+- как **GitHub brand page**
+- как источник `.txt` и `.json` для сайта и бота
+- как переход из бесплатного входа в полноценный VPN
 
-### Работает ли это на iPhone?
+Логика простая:
 
-Да, если Telegram на iPhone корректно открывает proxy-link и сам прокси в данный момент живой.
+- нужен только Telegram -> бесплатный MTProto
+- нужен обход и мобильный интернет -> белые списки / VLESS
+- нужен готовый полноценный продукт -> `RukaVPN_bot`
 
-### Работает ли это на Android?
-
-Да, Android тоже поддерживает Telegram proxy links.
-
-### Почему список нужно обновлять часто?
-
-Публичные прокси быстро умирают, поэтому свежесть списка очень важна.
-
-### Когда нужен полноценный VPN?
-
-Когда нужен не только Telegram, а ещё:
-
-- YouTube
-- Instagram
-- ChatGPT
-- браузер
-- зарубежные сервисы
-
-Для этого используй `https://t.me/RukaVPN_bot`.
-
-## Brand Links
+## Брендовые ссылки
 
 - VPN bot: <https://t.me/RukaVPN_bot>
-- brand site: <https://rukavpn.site/>
-
-## Marketing Notes
-
-Чтобы репозиторий лучше находили:
-
-- держи сильный keyword-rich `README`
-- не убирай `index.html` и `mobile.html`
-- используй raw-ссылки в Telegram, на сайте и в описаниях
-- обновляй файлы регулярно
-- связывай репозиторий с брендом `RUKA VPN`
+- основной сайт: <https://rukavpn.site/>
 
 ## Attribution
 
