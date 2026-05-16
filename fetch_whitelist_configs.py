@@ -22,8 +22,8 @@ SOURCES = OrderedDict(
 
 
 OUTPUTS = {
-    "igareck": ROOT / "whitelist_igareck.txt",
-    "zieng2": ROOT / "whitelist_zieng2.txt",
+    "primary": ROOT / "whitelist_primary.txt",
+    "extended": ROOT / "whitelist_extended.txt",
     "all": ROOT / "whitelist_all.txt",
     "ios": ROOT / "whitelist_ios.txt",
     "android": ROOT / "whitelist_android.txt",
@@ -99,8 +99,8 @@ def main() -> None:
     all_links = dedupe(igareck_links + zieng2_links)
     ios_links, android_links = split_by_fp(all_links)
 
-    write_lines(OUTPUTS["igareck"], igareck_links)
-    write_lines(OUTPUTS["zieng2"], zieng2_links)
+    write_lines(OUTPUTS["primary"], igareck_links)
+    write_lines(OUTPUTS["extended"], zieng2_links)
     write_lines(OUTPUTS["all"], all_links)
     write_lines(OUTPUTS["ios"], ios_links)
     write_lines(OUTPUTS["android"], android_links)
@@ -108,10 +108,9 @@ def main() -> None:
     stats = {
         "updated_at": int(time.time()),
         "updated_at_iso": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
-        "sources": source_stats,
         "totals": {
-            "igareck": len(igareck_links),
-            "zieng2": len(zieng2_links),
+            "primary": len(igareck_links),
+            "extended": len(zieng2_links),
             "all": len(all_links),
             "ios": len(ios_links),
             "android": len(android_links),
@@ -120,7 +119,7 @@ def main() -> None:
     OUTPUTS["stats"].write_text(json.dumps(stats, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     print("Whitelist files updated:")
-    for key in ("igareck", "zieng2", "all", "ios", "android"):
+    for key in ("primary", "extended", "all", "ios", "android"):
         print(f"  {OUTPUTS[key].name}: {stats['totals'][key]}")
 
 

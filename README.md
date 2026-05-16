@@ -37,8 +37,8 @@
 
 Готовые raw-файлы:
 
-- `igareck`: <https://raw.githubusercontent.com/blagobiz/ruka-mtproto-collector/main/whitelist_igareck.txt>
-- `zieng2`: <https://raw.githubusercontent.com/blagobiz/ruka-mtproto-collector/main/whitelist_zieng2.txt>
+- `Основной слой`: <https://raw.githubusercontent.com/blagobiz/ruka-mtproto-collector/main/whitelist_primary.txt>
+- `Расширенный слой`: <https://raw.githubusercontent.com/blagobiz/ruka-mtproto-collector/main/whitelist_extended.txt>
 - `All`: <https://raw.githubusercontent.com/blagobiz/ruka-mtproto-collector/main/whitelist_all.txt>
 - `iPhone`: <https://raw.githubusercontent.com/blagobiz/ruka-mtproto-collector/main/whitelist_ios.txt>
 - `Android / универсальные`: <https://raw.githubusercontent.com/blagobiz/ruka-mtproto-collector/main/whitelist_android.txt>
@@ -92,19 +92,6 @@
 - сценариев с мобильным интернетом
 - белых списков и обхода блокировок
 
-## Источники белых списков
-
-Сейчас репозиторий собирает конфиги отсюда:
-
-- [igareck/vpn-configs-for-russia](https://github.com/igareck/vpn-configs-for-russia)
-- [zieng2/wl](https://github.com/zieng2/wl)
-
-Что важно:
-
-- `igareck` даёт сильный слой под российский мобильный интернет
-- `zieng2` даёт более широкий пул VLESS-конфигов
-- в репозитории они собираются в отдельные `.txt`-файлы и общий объединённый список
-
 ## Как обновляются белые списки
 
 Для этого добавлен отдельный скрипт:
@@ -113,12 +100,12 @@
 
 Он:
 
-1. скачивает свежие VLESS-конфиги из `igareck` и `zieng2`
+1. скачивает свежие VLESS-конфиги из нескольких публичных whitelist feeds
 2. извлекает только валидные `vless://` ссылки
 3. удаляет дубли
 4. собирает:
-   - `whitelist_igareck.txt`
-   - `whitelist_zieng2.txt`
+   - `whitelist_primary.txt`
+   - `whitelist_extended.txt`
    - `whitelist_all.txt`
    - `whitelist_ios.txt`
    - `whitelist_android.txt`
