@@ -8,6 +8,7 @@ import time
 import urllib.request
 from collections import OrderedDict
 from pathlib import Path
+from urllib.parse import parse_qsl, urlsplit
 
 
 ROOT = Path(__file__).resolve().parent
@@ -29,6 +30,9 @@ OUTPUTS = {
     "android": ROOT / "whitelist_android.txt",
     "stats": ROOT / "whitelist_stats.json",
 }
+
+
+SUPPORTED_ANDROID_FINGERPRINTS = {"", "chrome", "firefox", "safari", "randomized"}
 
 
 def fetch_text(url: str) -> str:
@@ -62,6 +66,50 @@ def dedupe(items: list[str]) -> list[str]:
     return result
 
 
+def extract_query_params(link: str) -> dict[str, str]:
+    try:
+        query = urlsplit(link).query
+    except ValueError:
+        return {}
+    return {key.lower(): value for key, value in parse_qsl(query, keep_blank_values=True)}
+
+
+def has_android_query_garbage(link: str) -> bool:
+    normalized = link.lower()
+    garbage_markers = (
+        "%5c%22",
+        "%22%2c",
+        "headertype=none%22",
+        "none\\\\",
+        "headertype=none\\\",",
+        "\\#",
+    )
+    return any(marker in normalized for marker in garbage_markers)
+
+
+def is_android_friendly(link: str) -> bool:
+    if has_android_query_garbage(link):
+        return False
+
+    params = extract_query_params(link)
+    security = params.get("security", "").lower()
+    transport = params.get("type", "").lower()
+    fingerprint = params.get("fp", "").lower()
+
+    if security not in {"reality", "tls"}:
+        return False
+    if fingerprint not in SUPPORTED_ANDROID_FINGERPRINTS:
+        return False
+    if security == "reality" and (not params.get("pbk") or not params.get("sni")):
+        return False
+    if security == "tls" and not (params.get("sni") or params.get("host")):
+        return False
+    if transport == "ws" and not params.get("path"):
+        return False
+
+    return True
+
+
 def split_by_fp(links: list[str]) -> tuple[list[str], list[str]]:
     ios: list[str] = []
     android: list[str] = []
@@ -69,7 +117,7 @@ def split_by_fp(links: list[str]) -> tuple[list[str], list[str]]:
         normalized = link.lower()
         if "fp=ios" in normalized:
             ios.append(link)
-        else:
+        elif is_android_friendly(link):
             android.append(link)
     return ios, android
 

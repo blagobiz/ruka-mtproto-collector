@@ -41,7 +41,7 @@
 - `Расширенный слой`: <https://raw.githubusercontent.com/blagobiz/ruka-mtproto-collector/main/whitelist_extended.txt>
 - `All`: <https://raw.githubusercontent.com/blagobiz/ruka-mtproto-collector/main/whitelist_all.txt>
 - `iPhone`: <https://raw.githubusercontent.com/blagobiz/ruka-mtproto-collector/main/whitelist_ios.txt>
-- `Android / универсальные`: <https://raw.githubusercontent.com/blagobiz/ruka-mtproto-collector/main/whitelist_android.txt>
+- `Android / рекомендованные`: <https://raw.githubusercontent.com/blagobiz/ruka-mtproto-collector/main/whitelist_android.txt>
 
 Служебный файл:
 
@@ -103,13 +103,14 @@
 1. скачивает свежие VLESS-конфиги из нескольких публичных whitelist feeds
 2. извлекает только валидные `vless://` ссылки
 3. удаляет дубли
-4. собирает:
+4. очищает Android-слой от кривых и шумных ссылок
+5. собирает:
    - `whitelist_primary.txt`
    - `whitelist_extended.txt`
    - `whitelist_all.txt`
    - `whitelist_ios.txt`
    - `whitelist_android.txt`
-5. пишет `whitelist_stats.json`
+6. пишет `whitelist_stats.json`
 
 ## Как использовать
 
