@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://blagobiz.github.io/ruka-mtproto-collector/sitemap.xml

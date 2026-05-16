@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MTProto для Telegram | RUKA VPN Mobile</title>
-  <meta name="description" content="Мобильная страница RUKA VPN для быстрого подключения MTProto-прокси в Telegram без копирования ссылок.">
+  <title>Telegram Proxy iPhone & Android | RUKA VPN MTProto Mobile</title>
+  <meta name="description" content="Мобильная страница RUKA VPN для быстрого подключения MTProto-прокси в Telegram на iPhone и Android без ручного копирования ссылок.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://blagobiz.github.io/ruka-mtproto-collector/mobile.html">
   <style>
     body {
       margin: 0;
@@ -72,11 +74,11 @@
 <body>
   <div class="badge">RUKA VPN / Telegram MTProto</div>
   <section class="panel">
-    <h1>Бесплатные MTProto-прокси для Telegram</h1>
-    <p>Нажмите на кнопку ниже. Telegram откроется сразу на экране подключения прокси. Если нужен доступ не только в Telegram, используйте VPN.</p>
+    <h1>Бесплатные MTProto-прокси для Telegram на iPhone и Android</h1>
+    <p>Нажми на кнопку ниже. Telegram откроется сразу на экране подключения прокси. Если нужен доступ не только в Telegram, используй полноценный VPN.</p>
     <a class="vpn-btn" href="https://t.me/RukaVPN_bot">Открыть RUKA VPN Bot</a>
-    <div id="proxy-list" class="muted">Загружаем свежие MTProto-прокси…</div>
-    <div class="muted">Файл источника: <code>verified/proxy_links_tme_clean.txt</code></div>
+    <div id="proxy-list" class="muted">Загружаем свежие Telegram proxy links…</div>
+    <div class="muted">Источник: <code>verified/proxy_links_tme_clean.txt</code></div>
   </section>
 
   <script>
@@ -97,7 +99,7 @@
         a.href = link;
         a.rel = 'noopener noreferrer';
         a.className = 'proxy-btn';
-        a.textContent = 'Подключить MTProto #' + (idx + 1);
+        a.textContent = 'Подключить Telegram Proxy #' + (idx + 1);
         listEl.appendChild(a);
       });
     } catch (err) {
